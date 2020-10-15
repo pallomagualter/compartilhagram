@@ -7,20 +7,22 @@ const AppStack = createStackNavigator();
 import Feed from './pages/Feed';
 import New from './pages/New';
 
-export default function Routes(){
-    return(
-        <NavigationContainer>
 
-          <AppStack.Navigator screenOptions={{ headerShown: false}}>
+export default function Routes(){
+  return(
+      <NavigationContainer>
+
+        <AppStack.Navigator screenOptions={{ headerShown: false}}>
             <AppStack.Screen name="Feed" component={Feed} />
             <AppStack.Screen name="New" component={New} />
-          </AppStack.Navigator>
-        </NavigationContainer>
-    )
+                      
+        </AppStack.Navigator>
+      </NavigationContainer>
+  )
 
 }
 
 /*
- createStackNavigator é para navegação em pilha, enquanto uma tela está ativa existe várias ativas ao mesmo tempo.
- createSwitchNavigator só uma tela ficará tiva por vez, o usuário não poderá voltar para tela anterior.
- */
+createStackNavigator é para navegação em pilha, enquanto uma tela está ativa existe várias ativas ao mesmo tempo.
+createSwitchNavigator só uma tela ficará tiva por vez, o usuário não poderá voltar para tela anterior.
+*/
